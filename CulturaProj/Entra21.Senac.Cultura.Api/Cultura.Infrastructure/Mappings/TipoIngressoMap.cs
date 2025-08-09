@@ -2,15 +2,18 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 
-public class TipoIngressoMap : IEntityTypeConfiguration<TipoIngresso>
+namespace Cultura.Infrastructure.Mappings
 {
-    public void Configure(EntityTypeBuilder<TipoIngresso> builder)
+    public class TipoIngressoMap : IEntityTypeConfiguration<TipoIngresso>
     {
-        builder.ToTable("TipoIngresso");
+        public void Configure(EntityTypeBuilder<TipoIngresso> builder)
+        {
+            builder.ToTable("TipoIngresso");
 
-        builder.HasKey(t => t.Id);
+            builder.HasKey(t => t.Id);
 
-        builder.Property(t => t.Nome).IsRequired().HasMaxLength(100);
-        builder.Property(t => t.Descricao).HasMaxLength(300);
+            builder.Property(t => t.Nome).IsRequired().HasMaxLength(100);
+            builder.Property(t => t.Descricao).HasMaxLength(300);
+        }
     }
 }

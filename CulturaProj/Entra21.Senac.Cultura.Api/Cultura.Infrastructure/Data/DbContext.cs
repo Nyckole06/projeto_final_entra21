@@ -1,4 +1,5 @@
 ﻿using Cultura.Domain.Entities;
+using Cultura.Infrastructure.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cultura.Data

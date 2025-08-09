@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "FluentValidation/12.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Cultura.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -15,6 +28,21 @@
     }
   },
   "libraries": {
+    "FluentValidation/12.0.0": {
+      "sha512": "8NVLxtMUXynRHJIX3Hn1ACovaqZIJASufXIIFkD0EUbcd5PmMsL1xUD5h548gCezJ5BzlITaR9CAMrGe29aWpA==",
+      "type": "package",
+      "path": "fluentvalidation/12.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.12.0.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net8.0/FluentValidation.dll",
+        "lib/net8.0/FluentValidation.xml"
+      ]
+    },
     "Cultura.Domain/1.0.0": {
       "type": "project",
       "path": "../Cultura.Domain/Cultura.Domain.csproj",
@@ -23,27 +51,28 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Cultura.Domain >= 1.0.0"
+      "Cultura.Domain >= 1.0.0",
+      "FluentValidation >= 12.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nyckole.melo\\.nuget\\packages\\": {},
+    "C:\\Users\\gabri\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nyckole.melo\\Downloads\\SLNFINALCULTURA\\SLNFINALCULTURA\\SLNFINALCULTURA\\Entra21.Senac.Cultura.Api\\Cultura.Application\\Cultura.Application.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\Source\\Repos\\projeto_final_entra21\\CulturaProj\\Entra21.Senac.Cultura.Api\\Cultura.Application\\Cultura.Application.csproj",
       "projectName": "Cultura.Application",
-      "projectPath": "C:\\Users\\nyckole.melo\\Downloads\\SLNFINALCULTURA\\SLNFINALCULTURA\\SLNFINALCULTURA\\Entra21.Senac.Cultura.Api\\Cultura.Application\\Cultura.Application.csproj",
-      "packagesPath": "C:\\Users\\nyckole.melo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nyckole.melo\\Downloads\\SLNFINALCULTURA\\SLNFINALCULTURA\\SLNFINALCULTURA\\Entra21.Senac.Cultura.Api\\Cultura.Application\\obj\\",
+      "projectPath": "C:\\Users\\gabri\\Source\\Repos\\projeto_final_entra21\\CulturaProj\\Entra21.Senac.Cultura.Api\\Cultura.Application\\Cultura.Application.csproj",
+      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gabri\\Source\\Repos\\projeto_final_entra21\\CulturaProj\\Entra21.Senac.Cultura.Api\\Cultura.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\nyckole.melo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -52,15 +81,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\nyckole.melo\\Downloads\\SLNFINALCULTURA\\SLNFINALCULTURA\\SLNFINALCULTURA\\Entra21.Senac.Cultura.Api\\Cultura.Domain\\Cultura.Domain.csproj": {
-              "projectPath": "C:\\Users\\nyckole.melo\\Downloads\\SLNFINALCULTURA\\SLNFINALCULTURA\\SLNFINALCULTURA\\Entra21.Senac.Cultura.Api\\Cultura.Domain\\Cultura.Domain.csproj"
+            "C:\\Users\\gabri\\Source\\Repos\\projeto_final_entra21\\CulturaProj\\Entra21.Senac.Cultura.Api\\Cultura.Domain\\Cultura.Domain.csproj": {
+              "projectPath": "C:\\Users\\gabri\\Source\\Repos\\projeto_final_entra21\\CulturaProj\\Entra21.Senac.Cultura.Api\\Cultura.Domain\\Cultura.Domain.csproj"
             }
           }
         }
@@ -75,11 +103,17 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -96,7 +130,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "s2dwJ4MrQ8o=",
+  "dgSpecHash": "0/kR44orCho=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nyckole.melo\\Downloads\\SLNFINALCULTURA\\SLNFINALCULTURA\\SLNFINALCULTURA\\Entra21.Senac.Cultura.Api\\Cultura.Application\\Cultura.Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\gabri\\Source\\Repos\\projeto_final_entra21\\CulturaProj\\Entra21.Senac.Cultura.Api\\Cultura.Application\\Cultura.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabri\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
