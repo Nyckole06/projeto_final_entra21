@@ -1,0 +1,246 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../images/teste_2.png");
+}
+
+.container
+{
+    background-color: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(60px);
+    text-align: center;
+    width: 700px;
+    padding: 60px;
+    margin: 150px;
+    border-radius: 20px;
+    border: solid 1px rgba(245, 245, 245, 0.178);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(233, 233, 233, 0.253);
+}
+
+.endereco
+{
+    border: solid 2px rgba(255, 255, 255, 0.13);
+    border-radius: 15px;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.082);
+    cursor: pointer;
+}
+
+.endereco:hover
+{
+    scale: 1.02;
+    transition: ease-in 0.2s;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.144);
+}
+
+h2
+{
+    font-weight: bolder;
+    font-size: 40px;
+    padding: 0px 0px 50px 0px ;
+    color: white;
+}
+
+h3
+{
+    font-weight: bolder;
+    padding: 0px 0px 25px 0px ;
+    color: white;
+}
+
+.login-box, .remember, .forgot-password,.register
+{
+    padding: 15px;
+    color: whitesmoke;
+    width: 100%;
+}
+
+.remember_forgot-password
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember, .forgot-password
+{
+    font-size: 12px;
+}
+
+.remember
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input
+{
+    width: 100%;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.185);
+    color: white;
+    outline: none;
+}
+
+input:focus
+{
+        border: 1px solid white;
+}
+
+input[type="datetime-local"]
+{
+  color: transparent;
+  caret-color: white;
+  cursor: pointer;
+}
+
+input[type="datetime-local"]:focus
+{
+  color: white;
+  transition: ease-in .3s;
+}
+
+label
+{
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    font-size: 14px;
+    transition: ease-in .3s;
+    cursor: pointer;
+    color: rgb(224, 224, 224);
+
+}
+
+label.float 
+{
+    position: absolute; 
+    top: 9px;
+    left: 7px;
+    font-size: 14px;
+    transition: ease-in .3s;
+    cursor: pointer;
+    color: rgb(224, 224, 224);
+}
+
+input:focus + label.float, input:not(:placeholder-shown) + label.float
+{
+    top: -15px;
+    font-size: 13.5px;
+    color: white;
+}
+
+input:focus + label, input:not(:placeholder-shown) + label
+{
+    top: 0px;
+    font-size: 13.5px;
+    color: white
+}
+
+div
+{
+    position: relative;
+}
+
+div i 
+{
+    position: absolute;
+    right: 4.5%;
+    top: 35%;;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#rua-numero
+{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+#rua-numero .login-box
+{
+    padding: 0;
+    width: 70%;
+}
+
+#rua-numero .login-box:nth-child(2)
+{
+    width: 30%;
+}
+
+#cidade-estado {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+#cidade-estado .login-box {
+    padding: 0;
+    width: 70%;
+}
+
+#cidade-estado .login-box:nth-child(2){
+    width: 30%;
+}
+
+.botoes
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+#voltar
+{
+   border-radius: 15px 0 0 15px;
+}
+
+#cadastrar
+{
+   border-radius: 0 15px 15px 0;
+}
+
+button
+{
+    width: 200px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: transparent;
+    color: white;
+    border: solid 1px white;
+    padding: 8px;
+    margin: 50px 0px 20px 0px;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background-color: rgba(255, 255, 255, 0.24);;
+    color: white;
+    scale: 1.03;
+    transition: ease-in 0.1s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.219);
+}

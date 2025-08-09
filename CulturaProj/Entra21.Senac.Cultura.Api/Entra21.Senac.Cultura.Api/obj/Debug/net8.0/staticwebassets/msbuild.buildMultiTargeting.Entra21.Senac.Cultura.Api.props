@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Entra21.Senac.Cultura.Api.props" />
+</Project>

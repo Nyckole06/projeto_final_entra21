@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Entra21.Senac.Cultura.Api.Controllers.UsuarioController",
+    "Method": "AddUser",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioDto",
+        "Type": "Cultura.Application.Dtos.Input.UsuarioCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="CSS/cadastro.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form action="" method="post" id="formCadastro">
+
+             <div class="login-box">
+                <input type="text" id="nome" nome="nome_user" placeholder=" ">
+                <label for="nome">Nome completo</label>
+            </div>
+
+            
+            <div class="login-box">
+                <input type="email" id="email" name="email_user" placeholder=" ">
+                <label for="email">E-mail</label>
+            </div>
+
+            <div class="login-box">
+                <input type="password" id="senha" name="senha_user" placeholder=" ">
+                <label for="senha">Senha</label>
+                <i class="bi bi-eye-fill" id="btn-password" onclick="Mostrar()"></i>
+            </div>
+
+             <div class="login-box">
+                <input type="text" id="telefone" name="telefone_user" placeholder=" ">
+                <label for="telefone">Telefone</label>
+            </div>
+
+             <div class="login-box">
+                <input type="datetime-local" id="dataNascimento" name="dataNascimento" placeholder=" ">
+                <label for="dataNascimento">Data de nascimento</label>
+            </div>
+
+            <div class="endereco">
+
+                <div class="texto-endereco">
+                    <h3>Endereço</h3>
+                </div>
+
+                <div class="login-box">
+                    <input type="text" id="cep" name="cep_user" placeholder=" ">
+                    <label for="cep">CEP</label>
+                </div>
+
+                
+                <div class="login-box" id="cidade-estado">
+                    <div class="login-box">
+                        <input type="text" id="cidade" name="cidade_user" placeholder=" " readonly>
+                        <label for="cidade" class="float">Cidade</label>
+                    </div>
+
+                    <div class="login-box">
+                        <input type="text" id="estado" name="estado_user" placeholder=" " readonly>
+                        <label for="estado" class="float">Estado</label>
+                    </div>
+                </div>
+
+                <div class="login-box">
+                    <input type="text" id="bairro" name="bairro_user" placeholder=" ">
+                    <label for="bairro">Bairro</label>
+                </div>
+
+                <div class="login-box" id="rua-numero">
+                    <div class="login-box">
+                        <input type="text" id="rua" name="rua_user" placeholder=" ">
+                        <label for="rua" class="float">Rua</label>
+
+                    </div>
+                     
+                    <div class="login-box">
+                        <input type="text" id="numero" name="numero_user" placeholder=" ">
+                        <label for="numero" class="float">Número</label>
+                    </div>
+                </div>
+
+                <span id="mensagemCep"></span>
+                
+
+            </div>
+
+            <div class="botoes">
+                <div class="button-cadastrar">
+                    <button onclick="window.location.href='login.html'" type="button" id="voltar">Voltar</button>
+                </div>
+
+                <div class="button-cadastrar">
+                    <button type="submit"  id="cadastrar">Cadastrar</button>
+                </div>
+            </div>
+
+            <div id="mensagem" style="color:red;"></div>
+            <div id="sucesso" style="color:green;"></div>
+
+        </form>
+    </div>
+    <script src="JS/cadastro.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+        $('#cep').mask('00000-000');
+        $('#telefone').mask('(00) 00000-0000');
+    </script>
+</body>
+</html>

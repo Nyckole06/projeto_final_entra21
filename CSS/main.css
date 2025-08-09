@@ -1,0 +1,291 @@
+@font-face
+{
+  font-family: Lostar;
+  src: url('../fonts/Lostar.ttf') format('true type');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body
+{
+    background-color: #13001c;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 200vh 50vh;
+}
+
+header
+{
+    
+    background-color: rgba(255, 255, 255, 0);;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    backdrop-filter: blur(25px);
+    box-sizing: border-box;
+}
+
+ul, button, input
+{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    color: edf0f1;
+    outline: none;
+    padding: 0;
+}
+
+li a
+{
+    text-decoration: none;
+    color: inherit;
+    color: white;
+}
+
+nav li
+{
+    display: inline-block;
+    padding: 30px;
+}
+
+.search
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+
+}
+
+.search input {
+    width: 100%;
+    padding: 8px 15px 8px 45px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 11px;
+    color: rgb(0, 0, 0);
+    height: 35px;
+}
+
+.search i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #350745;
+    font-size: 18px;
+    cursor: pointer;
+}
+input
+{
+    background-color: rgba(216, 112, 147, 0.151);
+    border: none;
+    padding: 8px;
+    border-radius: 15px;
+    color: white;
+    backdrop-filter: blur(25px);
+    width: 450px;
+}
+
+input:hover
+{
+    box-shadow: 0 0 10px rgba(216, 112, 147, 0.267);
+}
+
+
+#login
+{
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    color: white;
+    border: solid 1px white;
+    padding: 8px;
+    border-radius: 30px;
+    width: 100px;
+    cursor: pointer;
+
+}
+
+#login:hover
+{
+    background-color: rgba(255, 255, 255, 0.103);
+    color: transparent(255, 255, 255, 0);
+    border: solid 1px white;
+    transform: scale(1.07);
+    transition: ease-in 0.15s;
+    
+}
+
+
+main
+{
+    background-color: transparent;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.main_homepage
+{
+    background-image: url("../images/teste_2.png");
+    background-position-y: -10px;
+    padding: 0px 60px 0px 60px;
+    margin:0px;
+    box-sizing: border-box;
+    align-content: flex-start;
+    height: 100vh;
+    
+}
+
+.main_citypage
+{
+    background-color: 13001c;
+    background-position-y: -10px;
+    padding: 0px 0px 0px 60px;
+    margin:0px;
+    box-sizing: border-box;
+    align-content: flex-start;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    
+}
+
+#city_text
+{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.cidades
+{
+    padding: 30px;
+    background-color: white;
+    margin: 30px;
+    height: 200px;
+    width: 200px;  
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+#bq
+{
+    padding: 30px;
+    background-color: white;
+    margin: 30px;
+    height: 200px;
+    width: 200px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+    
+}
+
+#it
+{
+    padding: 30px;
+    background-color: white;
+    margin: 30px;
+    height: 200px;
+    width: 200px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+    
+}
+
+#bc
+{
+    padding: 30px;
+    background-color: white;
+    margin: 30px;
+    height: 200px;
+    width: 200px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+    
+}
+
+h2, h3
+{
+    margin: 0;
+    font-family: "Hind Siliguri", sans-serif;
+    color: white;
+    font-size: 50px;
+    padding: 8px;
+}
+
+h3
+{
+    font-size: 36px;
+}
+
+span
+{
+    font-family: Lostar;
+}
+
+.text-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: 60px;
+}
+
+footer
+{
+    background-color: blue;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+i
+{
+    color: white;
+    cursor: pointer;
+}

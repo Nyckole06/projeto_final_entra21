@@ -1,0 +1,33 @@
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.deps.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\refint\Cultura.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Cultura\Back\Entra21.Senac.Cultify.Api\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\ref\Cultura.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.deps.json
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\refint\Cultura.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\ref\Cultura.Domain.dll
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.deps.json
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.dll
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\bin\Debug\net8.0\Cultura.Domain.pdb
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.AssemblyInfoInputs.cache
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.AssemblyInfo.cs
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.csproj.CoreCompileInputs.cache
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.dll
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\refint\Cultura.Domain.dll
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\Cultura.Domain.pdb
+C:\Users\nyckole.melo\Downloads\SLNFINALCULTURA\SLNFINALCULTURA\SLNFINALCULTURA\Entra21.Senac.Cultura.Api\Cultura.Domain\obj\Debug\net8.0\ref\Cultura.Domain.dll

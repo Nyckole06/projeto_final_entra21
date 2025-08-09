@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7hsP2VDN/wsSJE8HKDNAdeTPs6cSMxvmeJ7fLuKDwVg=",
+  "Source": "Entra21.Senac.Cultura.Api",
+  "BasePath": "_content/Entra21.Senac.Cultura.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
