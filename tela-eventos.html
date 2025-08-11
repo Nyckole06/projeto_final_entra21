@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/tela-eventos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Tela de Eventos</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/logo-unira.png" width="130px" height="130px" />
+            </div>
+
+            <div class="usuario-dropdown" style="display: none">
+                <i class="bi bi-list" style="display: none"></i>
+                <ul>
+                    <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
+                    <li><i class="bi bi-capslock-fill"></i><a href="#">Tornar-se promotor</a></li>
+                    <li><i class="bi bi-door-closed-fill"></i><a href="#">Sair</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="barra-lateral">
+            <div class="voltar">
+            <h2><i class="bi bi-arrow-bar-left"></i></h2>
+            </div>
+            <div class="expandir" style="display: none;">
+            <h2><i class="bi bi-arrow-bar-right"></i></h2>
+            </div>
+            <i class="bi bi-patch-plus"></i>
+            <span id="criar-evento">Criar novo evento</span>
+            <span id="ver-eventos">Ver eventos criados</span>
+        </section>
+
+        <section class="conteudo-principal">
+            <div class="eventos">
+                <form action="">
+                    <input type="file" name="" id="foto-logo">
+                </form>
+
+                <div class="meus-eventos">
+                    <button type="button">Publicar evento</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p><span>©Todos os direitos reservados</span></p>
+        </footer>
+    </div>
+</body>
+
+</html>
