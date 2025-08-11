@@ -2,15 +2,18 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 
-public class CategoriaMap : IEntityTypeConfiguration<Categoria>
+namespace Cultura.Infrastructure.Mappings
 {
-    public void Configure(EntityTypeBuilder<Categoria> builder)
+    public class CategoriaMap : IEntityTypeConfiguration<Categoria>
     {
-        builder.ToTable("Categoria");
+        public void Configure(EntityTypeBuilder<Categoria> builder)
+        {
+            builder.ToTable("Categoria");
 
-        builder.HasKey(c => c.Id);
+            builder.HasKey(c => c.Id);
 
-        builder.Property(c => c.Nome).IsRequired().HasMaxLength(100);
-        builder.Property(c => c.Descricao).HasMaxLength(300);
+            builder.Property(c => c.Nome).IsRequired().HasMaxLength(100);
+            builder.Property(c => c.Descricao).HasMaxLength(300);
+        }
     }
 }
