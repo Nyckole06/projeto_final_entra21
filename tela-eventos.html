@@ -28,14 +28,22 @@
 
         <section class="barra-lateral">
             <div class="voltar">
-            <h2><i class="bi bi-arrow-bar-left"></i></h2>
+                <h2><i class="bi bi-arrow-bar-left"></i></h2>
             </div>
+            
             <div class="expandir" style="display: none;">
-            <h2><i class="bi bi-arrow-bar-right"></i></h2>
+                <h2><i class="bi bi-arrow-bar-right"></i></h2>
             </div>
-            <i class="bi bi-patch-plus"></i>
-            <span id="criar-evento">Criar novo evento</span>
-            <span id="ver-eventos">Ver eventos criados</span>
+
+            <div class="opcoes">
+                <i class="bi bi-patch-plus"></i>
+                <span id="criar-evento">Criar novo evento</span>
+                </div>
+
+                <div class="opcoes">
+                    <i class="bi bi-calendar2-event"></i>
+                    <span id="ver-eventos">Ver eventos criados</span>
+                </div>
         </section>
 
         <section class="conteudo-principal">
@@ -44,7 +52,7 @@
                     <input type="file" name="" id="foto-logo">
                 </form>
 
-                <div class="meus-eventos">
+                <div class="meus-eventos" style="display: none;">
                     <button type="button">Publicar evento</button>
                 </div>
             </div>
@@ -54,6 +62,8 @@
             <p><span>©Todos os direitos reservados</span></p>
         </footer>
     </div>
+
+    <script src="JS/tela-eventos.js"></script>
 </body>
 
 </html>
