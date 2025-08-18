@@ -4,6 +4,7 @@ body
   padding: 0;
   box-sizing: border-box;
   background-image: url('../images/teste_2.png');
+
 }
 
 .container
@@ -40,6 +41,30 @@ header
     grid-column-start: 2;
     grid-column-end: 3;
     padding: 30px;
+}
+
+.upload-logo input[type="file"]
+{
+    display: none;
+}
+
+.upload-logo label
+{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    text-align: center;
+}
+
+.upload-logo
+{
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    border: 3px dashed grey;
 }
 
 .barra-lateral
@@ -152,7 +177,7 @@ nav li
     padding: 30px;
 }
 
-.box-meus-eventos
+.eventos
 {
     grid-row-start: 2;
     grid-row-end: 4;
@@ -165,4 +190,34 @@ nav li
     box-sizing: border-box;
     padding: 30px;
     transition: width 0.3s ease;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+button
+{
+
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: transparent;
+    color: white;
+    border: solid 1px white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 50px 0px 20px 0px;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background-color: rgba(255, 255, 255, 0.24);;
+    color: white;
+    scale: 1.03;
+    transition: ease-in 0.1s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.219);
 }
