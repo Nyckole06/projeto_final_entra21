@@ -52,10 +52,67 @@
                 <div class="box-meus-eventos" id="divEvento" style="display: none;">
                     <form action="">
 
-                        <input type="file" name="foto-logo_usuario" id="foto-logo">
-                        <label for="foto-logo">Insira aqui a foto do seu evento</label>
+                        <ol>
+                            <h2><li>Insira a logo do evento:</li></h2>
+                            <div class="upload-logo">
+                                <input type="file" name="foto-logo_usuario" id="foto-logo">
+                                <label for="foto-logo">Insira aqui a foto do seu evento</label>
+                            </div>
 
-                         <button type="button">Publicar evento</button>
+                            <h2><li>Insira o nome do evento:</li></h2>
+                            <input type="text" id="nome-evento" name="nome-evento-prod">
+                            <h2><li>Insira uma descricão para o evento:</li></h2>
+                            <textarea></textarea>
+                            <h2><li>Insira o local do evento:</li></h2>
+                            <div class="endereco">
+
+                <div class="texto-endereco">
+                </div>
+
+                <div class="login-box">
+                    <input type="text" id="cep" name="cep_user" placeholder=" ">
+                    <label for="cep">CEP</label>
+                </div>
+
+                
+                <div class="login-box" id="cidade-estado">
+                    <div class="login-box">
+                        <input type="text" id="cidade" name="cidade_user" placeholder=" " readonly>
+                        <label for="cidade" class="float">Cidade</label>
+                    </div>
+
+                    <div class="login-box">
+                        <input type="text" id="estado" name="estado_user" placeholder=" " readonly>
+                        <label for="estado" class="float">Estado</label>
+                    </div>
+                </div>
+
+                <div class="login-box">
+                    <input type="text" id="bairro" name="bairro_user" placeholder=" ">
+                    <label for="bairro">Bairro</label>
+                </div>
+
+                <div class="login-box" id="rua-numero">
+                    <div class="login-box">
+                        <input type="text" id="rua" name="rua_user" placeholder=" ">
+                        <label for="rua" class="float">Rua</label>
+
+                    </div>
+                     
+                    <div class="login-box">
+                        <input type="text" id="numero" name="numero_user" placeholder=" ">
+                        <label for="numero" class="float">Número</label>
+                    </div>
+                </div>
+
+                <span id="mensagemCep"></span>
+                
+
+            </div>
+                        </ol>
+                        <div class="btn-evento">
+                            <button type="button">Publicar evento</button>
+                        </div>
                     </form>
                 </div>
             </div>
