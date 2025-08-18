@@ -162,29 +162,23 @@ main
     
 }
 
-.main_citypage
+.main-categorias
 {
     background-color: 13001c;
     background-position-y: -10px;
-    padding: 0px 0px 0px 60px;
+    padding: 0px 60px 0px 60px;
     margin:0px;
     box-sizing: border-box;
+    display: flex;
     align-content: flex-start;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr;
-    
+    flex-direction: column;
+    height: 100vh;
 }
 
-#city_text
+#categorias_text
 {
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 3;
     color: white;
     font-family: "Bebas Neue", sans-serif;
     font-weight: bolder;
@@ -192,61 +186,22 @@ main
     text-transform: uppercase;
 }
 
-.cidades
+.slide-box
 {
-    padding: 30px;
-    background-color: white;
-    margin: 30px;
-    height: 200px;
-    width: 200px;  
     display: flex;
     justify-content: center; 
     align-items: center;
+    flex-direction: row;
 }
 
-#bq
+.categorias
 {
     padding: 30px;
     background-color: white;
     margin: 30px;
     height: 200px;
     width: 200px;
-    grid-column-start: 1;
-    grid-column-end: 1;
-
-    grid-row-start: 2;
-    grid-row-end: 2;
-    
-}
-
-#it
-{
-    padding: 30px;
-    background-color: white;
-    margin: 30px;
-    height: 200px;
-    width: 200px;
-    grid-column-start: 2;
-    grid-column-end: 2;
-
-    grid-row-start: 2;
-    grid-row-end: 2;
-    
-}
-
-#bc
-{
-    padding: 30px;
-    background-color: white;
-    margin: 30px;
-    height: 200px;
-    width: 200px;
-    grid-column-start: 3;
-    grid-column-end: 3;
-
-    grid-row-start: 2;
-    grid-row-end: 2;
-    
+    box-sizing: border-box;
 }
 
 h2, h3
