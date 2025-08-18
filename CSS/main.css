@@ -192,16 +192,35 @@ main
     justify-content: center; 
     align-items: center;
     flex-direction: row;
+    width: 1300px;
+    background-color: green;
+    overflow: hidden;
 }
 
 .categorias
 {
     padding: 30px;
     background-color: white;
+    color: black;
     margin: 30px;
     height: 200px;
     width: 200px;
+    border-radius: 15px;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-shrink: 0;
+
+}
+
+.categorias h2
+{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 h2, h3
