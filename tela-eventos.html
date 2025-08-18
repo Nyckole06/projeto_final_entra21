@@ -10,50 +10,53 @@
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+            <img src="images/logo-unira.png" width="130px" height="130px" />
+        </div>
+
+        <div class="usuario-dropdown" style="display: none">
+            <i class="bi bi-list" style="display: none"></i>
+            <ul>
+                <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
+                <li><i class="bi bi-capslock-fill"></i><a href="#">Tornar-se promotor</a></li>
+                <li><i class="bi bi-door-closed-fill"></i><a href="#">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
-            <div class="logo">
-                <img src="images/logo-unira.png" width="130px" height="130px" />
-            </div>
 
-            <div class="usuario-dropdown" style="display: none">
-                <i class="bi bi-list" style="display: none"></i>
-                <ul>
-                    <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
-                    <li><i class="bi bi-capslock-fill"></i><a href="#">Tornar-se promotor</a></li>
-                    <li><i class="bi bi-door-closed-fill"></i><a href="#">Sair</a></li>
-                </ul>
-            </div>
-        </header>
-
-        <section class="barra-lateral">
-            <div class="voltar">
+        <section class="barra-lateral" id="barraLateral">
+            <div class="voltar" id="btn-voltar" style="display: block;">
                 <h2><i class="bi bi-arrow-bar-left"></i></h2>
             </div>
-            
-            <div class="expandir" style="display: none;">
+
+            <div class="expandir" id="btn-expandir" style="display: none;">
                 <h2><i class="bi bi-arrow-bar-right"></i></h2>
             </div>
 
-            <div class="opcoes">
+            <div class="opcoes"  id="btn-criar-evento">
                 <i class="bi bi-patch-plus"></i>
-                <span id="criar-evento">Criar novo evento</span>
-                </div>
+                <span class="frase-btn">Criar novo evento</span>
+            </div>
 
-                <div class="opcoes">
-                    <i class="bi bi-calendar2-event"></i>
-                    <span id="ver-eventos">Ver eventos criados</span>
-                </div>
+            <div class="opcoes"  id="btn-ver-eventos">
+                <i class="bi bi-calendar2-event"></i>
+                <span class="frase-btn">Ver eventos criados</span>
+            </div>
         </section>
 
         <section class="conteudo-principal">
             <div class="eventos">
-                <form action="">
-                    <input type="file" name="" id="foto-logo">
-                </form>
+                <div class="box-meus-eventos" id="divEvento" style="display: none;">
+                    <form action="">
 
-                <div class="meus-eventos" style="display: none;">
-                    <button type="button">Publicar evento</button>
+                        <input type="file" name="foto-logo_usuario" id="foto-logo">
+                        <label for="foto-logo">Insira aqui a foto do seu evento</label>
+
+                         <button type="button">Publicar evento</button>
+                    </form>
                 </div>
             </div>
         </section>
