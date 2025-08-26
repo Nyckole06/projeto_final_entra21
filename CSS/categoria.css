@@ -1,0 +1,43 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('../images/teste_2.png');
+
+}
+
+.listaEventos
+{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.evento-item
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.185);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#compraIngresso
+{
+    background:rgba(39, 141, 39, 0.666);
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}

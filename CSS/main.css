@@ -14,36 +14,34 @@ html, body
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html
-{
     scroll-behavior: smooth;
 }
+
 
 .container
 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10vh 200vh 50vh;
+    grid-template-rows: 10vh 1fr auto;
+    min-height: 100vh;
 }
 
 header
 {
     
-    background-color: rgba(255, 255, 255, 0);;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(25px);
     display: flex;
-    position: fixed;
-    width: 100%;
-    height: 100px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
     padding: 30px;
     grid-row-start: 1;
     grid-row-end: 1;
-    backdrop-filter: blur(25px);
     box-sizing: border-box;
-    z-index: 10;
 }
 
 ul, button, input
@@ -57,10 +55,14 @@ ul, button, input
     padding: 0;
 }
 
+.menu li:hover
+{
+     transform: scale(1.08);
+}
+
 li a
 {
     text-decoration: none;
-    color: inherit;
     color: white;
 }
 
@@ -68,6 +70,40 @@ nav li
 {
     display: inline-block;
     padding: 30px;
+}
+
+
+#login
+{
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    color: white;
+    border: solid 1px white;
+    padding: 8px;
+    border-radius: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#login:hover
+{
+    background-color: rgba(255, 255, 255, 0.103);
+    color: transparent(255, 255, 255, 0);
+    border: solid 1px white;
+    transform: scale(1.07);
+    transition: ease-in 0.15s;
+}
+
+.text-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: 60px;
 }
 
 .search
@@ -100,52 +136,9 @@ nav li
     font-size: 18px;
     cursor: pointer;
 }
-input
-{
-    background-color: rgba(216, 112, 147, 0.151);
-    border: none;
-    padding: 8px;
-    border-radius: 15px;
-    color: white;
-    backdrop-filter: blur(25px);
-    width: 450px;
-}
-
-input:hover
-{
-    box-shadow: 0 0 10px rgba(216, 112, 147, 0.267);
-}
-
-
-#login
-{
-    background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    font-size: 16px;
-    color: white;
-    border: solid 1px white;
-    padding: 8px;
-    border-radius: 30px;
-    width: 100px;
-    cursor: pointer;
-
-}
-
-#login:hover
-{
-    background-color: rgba(255, 255, 255, 0.103);
-    color: transparent(255, 255, 255, 0);
-    border: solid 1px white;
-    transform: scale(1.07);
-    transition: ease-in 0.15s;
-    
-}
-
 
 main
 {
-    background-color: transparent;
     grid-row-start: 2;
     grid-row-end: 2;
 }
@@ -157,14 +150,13 @@ main
     padding: 0px 60px 0px 60px;
     margin:0px;
     box-sizing: border-box;
-    align-content: flex-start;
+    align-content: flex-start;    
     height: 100vh;
-    
 }
 
 .main-categorias
 {
-    background-color: 13001c;
+    background: linear-gradient(#13001c, #8f0083);
     background-position-y: -10px;
     padding: 0px 60px 0px 60px;
     margin:0px;
@@ -184,43 +176,118 @@ main
     font-weight: bolder;
     font-size: 50px;
     text-transform: uppercase;
+    margin: 0 0 80px 0;
 }
 
-.slide-box
+.swiper /*slider-box*/
 {
     display: flex;
     justify-content: center; 
     align-items: center;
     flex-direction: row;
+    height: 500px;
     width: 1300px;
-    background-color: green;
+    background-color: transparent;
     overflow: hidden;
 }
 
-.categorias
+.swiper-wrapper /*categoria-animacao*/
 {
-    padding: 30px;
-    background-color: white;
-    color: black;
-    margin: 30px;
-    height: 200px;
-    width: 200px;
-    border-radius: 15px;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+
+.swiper-slide
+{
+    padding: 50px;
+    margin: 30px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    height: 300px !important;
+    width: 300px !important;
+    border-radius: 15px;
+    box-sizing: border-box;
     text-transform: uppercase;
+    text-align: center;
     flex-shrink: 0;
+    cursor: pointer;
+    
+}
+
+.swiper-slide:hover 
+{
+    transform: scale(1.10) !important;
 
 }
 
-.categorias h2
+.swiper-slide h2
 {
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
+    margin: 15px 0 0 0;
+    color: white;
+    font-size: 30px;
+}
+
+.swiper-slide img
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+}
+
+.roxo
+{
+    background-color: rgba(255, 90, 255, 0.185);
+    backdrop-filter: blur(35px);
+    border: 4px solid rgb(255, 90, 255) ;
+}
+
+.roxo:hover
+{
+    box-shadow: 10px 20px 28px rgba(255, 90, 255, 0.349);
+}
+
+.laranja
+{
+    background-color: rgba(255, 197, 90, 0.185);
+    backdrop-filter: blur(35px);
+    border: 4px solid rgb(255, 197, 90) ;
+    
+}
+
+.laranja:hover
+{
+    box-shadow: 10px 20px 28px rgba(255, 197, 90, 0.616);
+}
+
+.swiper-button-prev,
+.swiper-button-next
+{
+    background-color: rgba(255, 255, 255, 0.404);
+    padding: 10px;
+    color: #40005e !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 100%;
+}
+
+.swiper-button-prev::after
+{
+    content: '\f053';
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    font-size: 30px !important;
+}
+
+.swiper-button-next::after
+{
+    content: '\f054';
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    font-size: 30px !important;
 }
 
 h2, h3
@@ -232,24 +299,9 @@ h2, h3
     padding: 8px;
 }
 
-h3
-{
-    font-size: 36px;
-}
-
 span
 {
     font-family: Lostar;
-}
-
-.text-center
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 15px;
-    margin: 60px;
 }
 
 footer
@@ -257,10 +309,4 @@ footer
     background-color: blue;
     grid-row-start: 3;
     grid-row-end: 3;
-}
-
-i
-{
-    color: white;
-    cursor: pointer;
 }
