@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos por Categoria</title>
+  <link rel="stylesheet" href="CSS/categoria.css">
+</head>
+<body>
+  <h1 id="tituloCategoria">Eventos</h1>
+  <div class="listaEventos"></div>
+  <script>
+    function carregarEventosPorCategoria(categoria) {
+      const listaEventos = document.querySelector(".listaEventos");
+      const titulo = document.getElementById("tituloCategoria");
+      
+      // Atualiza o título da página
+      titulo.textContent = `Eventos de ${categoria}`;
+      listaEventos.innerHTML = "";
+
+      // Recupera os eventos do localStorage
+      let eventos = JSON.parse(localStorage.getItem("eventos")) || [];
+
+      // Filtra pela categoria
+      let eventosFiltrados = eventos.filter(
+        e => e.categoria.toLowerCase() === categoria.toLowerCase()
+      );
+
+      if (eventosFiltrados.length === 0) {
+        listaEventos.innerHTML = "<p>Nenhum evento encontrado nessa categoria.</p>";
+        return;
+      }
+
+      // Renderiza cada evento
+      eventosFiltrados.forEach(evento => {
+        listaEventos.innerHTML += `
+          <div class="evento-item">
+                ${evento.logo ? `<img src="${evento.logo}" alt="Logo do evento" width="350" height="200" style="object-fit:cover;border-radius:8px;">` : ""}
+                <div style="flex:1">
+                    <h3 style = "text-align: center; font-size: 23px; text-transform: uppercase;   ">${evento.nome}</h3>
+                    <p style = "text-align: center; margin: 0px 0px 50px 0px;">${evento.descricao}</p>
+                    <p><strong>Categoria:</strong> ${evento.categoria}</p>
+                    <p><strong>Data e hora:</strong> ${evento.dataHora}</p>
+                    <p><strong>Local:</strong> ${evento.local.rua}, ${evento.local.numero} - ${evento.local.bairro}, ${evento.local.cidade}/${evento.local.estado} - CEP: ${evento.local.cep}</p>
+                    <p><strong>Organizado por:</strong> ${evento.nomeProdutor}</p>
+                </div>
+
+                 <button id="compraIngresso">
+                    Comprar ingresso
+                </button>
+
+            </div>
+        `;
+      });
+    }
+
+    // Pega a categoria pela URL
+    const params = new URLSearchParams(window.location.search);
+    const categoria = params.get("cat");
+
+    if (categoria) {
+      carregarEventosPorCategoria(categoria);
+    } else {
+      document.querySelector(".listaEventos").innerHTML = "<p>Nenhuma categoria selecionada.</p>";
+    }
+  </script>
+</body>
+</html>

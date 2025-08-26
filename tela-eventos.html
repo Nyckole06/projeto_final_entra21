@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/tela-eventos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/304afbf940.js" crossorigin="anonymous"></script>
     <title>Tela de Eventos</title>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo-unira.png" width="130px" height="130px" />
+            <img src="images/logo-unira.png" onclick="window.location.href='index.html'" style="cursor: pointer;" width="130px" height="130px" />
         </div>
 
         <div class="usuario-dropdown" style="display: none">
@@ -36,84 +37,127 @@
                 <h2><i class="bi bi-arrow-bar-right"></i></h2>
             </div>
 
-            <div class="opcoes"  id="btn-criar-evento">
+            <div class="opcoes" id="btn-criar-evento">
                 <i class="bi bi-patch-plus"></i>
                 <span class="frase-btn">Criar novo evento</span>
             </div>
 
-            <div class="opcoes"  id="btn-ver-eventos">
+            <div class="opcoes" id="btn-ver-eventos">
                 <i class="bi bi-calendar2-event"></i>
                 <span class="frase-btn">Ver eventos criados</span>
             </div>
         </section>
 
         <section class="conteudo-principal">
-            <div class="eventos">
-                <div class="box-meus-eventos" id="divEvento" style="display: none;">
+            <div class="eventos" id="container_eventos" style="display: none;">
+                <div class="box-meus-eventos" id="formEvento" style="display: none;">
                     <form action="">
-
+                        
                         <ol>
-                            <h2><li>Insira a logo do evento:</li></h2>
+                            <h2>
+                                <li>Insira a logo do evento:</li>
+                            </h2>
+                            <div class="upload-container">
                             <div class="upload-logo">
-                                <input type="file" name="foto-logo_usuario" id="foto-logo">
-                                <label for="foto-logo">Insira aqui a foto do seu evento</label>
+                                <input type="file" id="foto-logo" name="foto-logo_usuario">
+                                <label for="foto-logo" id="logo-evento">Insira aqui a foto do seu evento</label>
+                                <img id="preview-logo" alt="Prévia do logo" />
+                            </div>
+                            <div class="icon-foto" id="icon-foto">
+                                <i class="fa-regular fa-image"></i>
+                            </div>
                             </div>
 
-                            <h2><li>Insira o nome do evento:</li></h2>
+                            <h2>
+                                <label for="nome-evento"><li>Insira o nome do evento:</li></label>
+                            </h2>
                             <input type="text" id="nome-evento" name="nome-evento-prod">
-                            <h2><li>Insira uma descricão para o evento:</li></h2>
-                            <textarea></textarea>
-                            <h2><li>Insira o local do evento:</li></h2>
-                            <div class="endereco">
+                            <h2>
+                                <label for="descricao-evento"><li>Insira uma descrição para o evento:</li></label>
+                            </h2>
+                            <textarea id="descricao-evento" name="descricao-evento-prod"></textarea>
+                            <h2>
+                                
+                                <h2>
+                                <li><label for="opcoes-categorias">Insira a categoria do evento:</label></li>
+                            </h2>
+                            <select id="opcoes-categorias" name="opcoes-categorias-prod">
+                                <option value=""></option>
+                                <option value="Show">Show</option>
+                                <option value="Teatro">Teatro</option>
+                                <option value="Gastronomia">Gastronomia</option>
+                                <option value="Tecnologia">Tecnologia</option>
+                                <option value="Humor">Humor</option>
+                                <option value="Arte">Arte</option>
+                                <option value="Literatura">Literatura</option>
+                            </select>                           
 
-                <div class="texto-endereco">
-                </div>
+                            <h2>
+                                <li>Insira o local do evento:</li>
+                            </h2>
 
-                <div class="login-box">
-                    <input type="text" id="cep" name="cep_user" placeholder=" ">
-                    <label for="cep">CEP</label>
-                </div>
+                            <div class="endereco-container">
+                                <div class="endereco">
 
-                
-                <div class="login-box" id="cidade-estado">
-                    <div class="login-box">
-                        <input type="text" id="cidade" name="cidade_user" placeholder=" " readonly>
-                        <label for="cidade" class="float">Cidade</label>
-                    </div>
+                                    <div class="endereco-box">
+                                        <input type="text" id="cep" name="cep_user" placeholder=" ">
+                                        <label for="cep">CEP</label>
+                                    </div>
 
-                    <div class="login-box">
-                        <input type="text" id="estado" name="estado_user" placeholder=" " readonly>
-                        <label for="estado" class="float">Estado</label>
-                    </div>
-                </div>
 
-                <div class="login-box">
-                    <input type="text" id="bairro" name="bairro_user" placeholder=" ">
-                    <label for="bairro">Bairro</label>
-                </div>
+                                    <div class="endereco-box" id="cidade-estado">
+                                        <div class="endereco-box">
+                                            <input type="text" id="cidade" name="cidade_user" placeholder=" " readonly>
+                                            <label for="cidade" class="float">Cidade</label>
+                                        </div>
 
-                <div class="login-box" id="rua-numero">
-                    <div class="login-box">
-                        <input type="text" id="rua" name="rua_user" placeholder=" ">
-                        <label for="rua" class="float">Rua</label>
+                                        <div class="endereco-box">
+                                            <input type="text" id="estado" name="estado_user" placeholder=" " readonly>
+                                            <label for="estado" class="float">Estado</label>
+                                        </div>
+                                    </div>
 
-                    </div>
-                     
-                    <div class="login-box">
-                        <input type="text" id="numero" name="numero_user" placeholder=" ">
-                        <label for="numero" class="float">Número</label>
-                    </div>
-                </div>
+                                    <div class="endereco-box">
+                                        <input type="text" id="bairro" name="bairro_user" placeholder=" ">
+                                        <label for="bairro">Bairro</label>
+                                    </div>
 
-                <span id="mensagemCep"></span>
-                
+                                    <div class="endereco-box" id="rua-numero">
+                                        <div class="endereco-box">
+                                            <input type="text" id="rua" name="rua_user" placeholder=" ">
+                                            <label for="rua" class="float">Rua</label>
 
-            </div>
+                                        </div>
+
+                                        <div class="endereco-box">
+                                            <input type="text" id="numero" name="numero_user" placeholder=" ">
+                                            <label for="numero" class="float">Número</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <h2>
+                                <label for="dataHora-evento"><li>Insira a data e hora de início:</li></label>
+                            </h2>
+                            <input type="datetime-local" id="dataHora-evento" name="dataHora-evento-prod">
+
+                            <h2>
+                                <label for="nomeProdutor-evento"><li>Insira o nome do organizador do evento:</li></label>
+                            </h2>
+                            <input type="text" id="nomeProdutor-evento" name="nomeProdutor-evento-prod">
                         </ol>
                         <div class="btn-evento">
-                            <button type="button">Publicar evento</button>
+                            <button type="button" onclick="salvarEvento()">Publicar evento</button>
                         </div>
                     </form>
+                </div>
+            </div>
+
+            <div class="eventos" id="container_eventos_criados" style="display: none;">
+                <div class="box-meus-eventos-criados" id="verEventos" style="display: none;">
+                    <div class="listaEventos"></div>
                 </div>
             </div>
         </section>
@@ -124,6 +168,11 @@
     </div>
 
     <script src="JS/tela-eventos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+        $('#cep').mask('00000-000');
+    </script>
 </body>
 
 </html>

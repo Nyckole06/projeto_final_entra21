@@ -8,14 +8,16 @@
     <link rel="icon" href="images/logo3.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/304afbf940.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
         <header>
             <div class="teste">
-            <img src="images/logo-unira.png" width="130px" height="130px" />
-        </div>
+                <img src="images/logo-unira.png"  onclick="window.location.href='index.html'" style="cursor: pointer;" width="130px" height="130px" />
+            </div>
 
             <nav>
                 <ul class="menu">
@@ -31,7 +33,7 @@
             </div>
 
             <div class="usuario-dropdown" style="display: none">
-                <i class="bi bi-list"  style="display: none"></i>
+                <i class="bi bi-list" style="display: none"></i>
                 <ul>
                     <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
                     <li><i class="bi bi-capslock-fill"></i><a href="#">Tornar-se promotor</a></li>
@@ -40,10 +42,11 @@
             </div>
 
             <div class="botao" style="display: none;">
-                <button type="button" id="botao-evento">Criar Eventos</button>
+                <button type="button" id="botao-evento">Eventos</button>
             </div>
 
         </header>
+
         <main>
             <section class="main_homepage" id="home">
                 <div class="content_homepage">
@@ -62,38 +65,72 @@
             </section>
 
             <section class="main-categorias" id="categorias">
-                
+
                 <p id="categorias_text">Procure os eventos pelas categorias</p>
 
-                <div class="slide-box">
-                    <div class="categorias">
-                        <h2>Shows</h2>
-                    </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
 
-                    <div class="categorias">
-                        <h2>Teatro</h2>
-                    </div>
+                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="show"onclick="window.location.href='categoria.html?cat=Show'">
+                            <div class="img-box">
+                                <img src="images/show-icon.png" alt="">
+                            </div>
+                            <h2>Shows</h2>
+                        </div>
 
-                    <div class="categorias">
-                        <h2>Gastronomia</h2>
-                    </div>
+                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="teatro"onclick="window.location.href='categoria.html?cat=Teatro'">
+                            <div class="img-box">
+                                <img src="images/teatro-icon.png" alt="">
+                            </div>
+                            <h2>Teatro</h2>
+                        </div>
 
-                    <div class="categorias">
-                        <h2>Tecnologia</h2>
-                    </div>
+                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="gastronomia"onclick="window.location.href='categoria.html?cat=Gastronomia'">
+                            <div class="img-box">
+                                <img src="images/gastronomia-icon.png" alt="">
+                            </div>
+                            <h2>Gastronomia</h2>
+                        </div>
 
-                    <div class="categorias">
-                        <h2>Humor</h2>
-                    </div>
+                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="tech"onclick="window.location.href='categoria.html?cat=Tecnologia'">
+                            <div class="img-box">
+                                <img src="images/tech-icon.png" alt="">
+                            </div>
+                            <h2>Tecnologia</h2>
+                        </div>
 
-                    <div class="categorias">
-                        <h2>Arte</h2>
-                    </div>
+                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="humor"onclick="window.location.href='categoria.html?cat=Humor'">
+                            <div class="img-box">
+                                <img src="images/humor-icon.png" alt="">
+                            </div>
+                            <h2>Humor</h2>
+                        </div>
 
-                    <div class="categorias">
-                        <h2>Literatura</h2>
+                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="arte"onclick="window.location.href='categoria.html?cat=Arte'">
+                            <div class="img-box">
+                                <img src="images/arte-icon.png" alt="">
+                            </div>
+                            <h2>Arte</h2>
+                        </div>
+
+                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="literatura"onclick="window.location.href='categoria.html?cat=Literatura'">
+                            <div class="img-box">
+                                <img src="images/literatura-icon.png" alt="">
+                            </div>
+                            <h2>Literatura</h2>
+                        </div>
+
+
                     </div>
+                    
+                   <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
+
             </section>
 
         </main>
@@ -101,6 +138,9 @@
             <p>teste</p>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="categorias.js"></script>
 </body>
 
 </html>
