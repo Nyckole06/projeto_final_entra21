@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Eventos por Categoria</title>
   <link rel="stylesheet" href="CSS/categoria.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <script src="https://kit.fontawesome.com/304afbf940.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="container">
-    <h1 id="tituloCategoria">Eventos</h1>
-    <div class="listaEventos"></div>
+
+    <header>
+      <div class="logo">
+        <img src="images/logo-unira.png" onclick="window.location.href='index.html'" style="cursor: pointer;"
+          width="130px" height="130px" />
+      </div>
+
+      <div class="usuario-dropdown" style="display: block">
+        <i class="bi bi-list" style="display: block"></i>
+        <ul>
+          <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
+          <li><i class="bi bi-capslock-fill"></i><a href="#">Tornar-se promotor</a></li>
+          <li><i class="bi bi-door-closed-fill"></i><a href="#">Sair</a></li>
+        </ul>
+      </div>
+
+    </header>
+
+    <div class="container_cards">
+      <h1 id="tituloCategoria">Eventos</h1>
+      <div class="listaEventos"></div>
+    </div>
+
+    <footer>
+      <p><span>©Todos os direitos reservados</span></p>
+    </footer>
   </div>
   <script>
     function carregarEventosPorCategoria(categoria) {
       const listaEventos = document.querySelector(".listaEventos");
       const titulo = document.getElementById("tituloCategoria");
-      
+
       // Atualiza o título da página
       titulo.textContent = `Eventos de ${categoria}`;
       listaEventos.innerHTML = "";
@@ -66,4 +94,5 @@
     }
   </script>
 </body>
+
 </html>

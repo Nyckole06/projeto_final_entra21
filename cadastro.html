@@ -10,97 +10,118 @@
 </head>
 <body>
     <div class="container">
-        <h2>Cadastro</h2>
-        <form action="" method="post" id="formCadastro">
 
-             <div class="login-box">
-                <input type="text" id="nome" nome="nome_user" placeholder=" ">
-                <label for="nome">Nome completo</label>
+        <header>
+            <div class="logo">
+                <img src="images/logo-unira.png"  onclick="window.location.href='index.html'" style="cursor: pointer;" width="130px" height="130px" />
             </div>
+        </header>
 
-            
-            <div class="login-box">
-                <input type="email" id="email" name="email_user" placeholder=" ">
-                <label for="email">E-mail</label>
-            </div>
+        <div class="wrapper">
+            <div class="container_formulario">
+                <h2>Cadastro</h2>
+                <form action="" method="post" id="formCadastro">
 
-            <div class="login-box">
-                <input type="password" id="senha" name="senha_user" placeholder=" ">
-                <label for="senha">Senha</label>
-                <i class="bi bi-eye-fill" id="btn-password" onclick="Mostrar()"></i>
-            </div>
-
-             <div class="login-box">
-                <input type="text" id="telefone" name="telefone_user" placeholder=" ">
-                <label for="telefone">Telefone</label>
-            </div>
-
-             <div class="login-box">
-                <input type="datetime-local" id="dataNascimento" name="dataNascimento" placeholder=" ">
-                <label for="dataNascimento">Data de nascimento</label>
-            </div>
-
-            <div class="endereco">
-
-                <div class="texto-endereco">
-                    <h3>Endereço</h3>
-                </div>
-
-                <div class="login-box">
-                    <input type="text" id="cep" name="cep_user" placeholder=" ">
-                    <label for="cep">CEP</label>
-                </div>
-
-                
-                <div class="login-box" id="cidade-estado">
                     <div class="login-box">
-                        <input type="text" id="cidade" name="cidade_user" placeholder=" " readonly>
-                        <label for="cidade" class="float">Cidade</label>
+                        <input type="text" id="nome" nome="nome_user" placeholder=" ">
+                        <label for="nome">Nome completo</label>
+                    </div>
+
+                    
+                    <div class="login-box">
+                        <input type="email" id="email" name="email_user" placeholder=" ">
+                        <label for="email">E-mail</label>
                     </div>
 
                     <div class="login-box">
-                        <input type="text" id="estado" name="estado_user" placeholder=" " readonly>
-                        <label for="estado" class="float">Estado</label>
+                        <input type="password" id="senha" name="senha_user" placeholder=" ">
+                        <label for="senha">Senha</label>
+                        <i class="bi bi-eye-fill" id="btn-password" onclick="MostrarSenha()"></i>
                     </div>
-                </div>
 
-                <div class="login-box">
-                    <input type="text" id="bairro" name="bairro_user" placeholder=" ">
-                    <label for="bairro">Bairro</label>
-                </div>
-
-                <div class="login-box" id="rua-numero">
                     <div class="login-box">
-                        <input type="text" id="rua" name="rua_user" placeholder=" ">
-                        <label for="rua" class="float">Rua</label>
-
+                        <input type="password" id="senha_validar" name="senha_validar_user" placeholder=" ">
+                        <label for="senha_validar">Confirme a senha</label>
+                        <i class="bi bi-eye-fill" id="btn-password-validar" onclick="MostrarValidarSenha()"></i>
                     </div>
-                     
+
                     <div class="login-box">
-                        <input type="text" id="numero" name="numero_user" placeholder=" ">
-                        <label for="numero" class="float">Número</label>
+                        <input type="text" id="telefone" name="telefone_user" placeholder=" ">
+                        <label for="telefone">Telefone</label>
                     </div>
-                </div>
 
-                <span id="mensagemCep"></span>
-                
+                    <div class="login-box">
+                        <input type="datetime-local" id="dataNascimento" name="dataNascimento" placeholder=" ">
+                        <label for="dataNascimento">Data de nascimento</label>
+                    </div>
 
+                    <div class="endereco">
+
+                        <div class="texto-endereco">
+                            <h3>Endereço</h3>
+                        </div>
+
+                        <div class="login-box">
+                            <input type="text" id="cep" name="cep_user" placeholder=" ">
+                            <label for="cep">CEP</label>
+                        </div>
+
+                        
+                        <div class="login-box" id="cidade-estado">
+                            <div class="login-box">
+                                <input type="text" id="cidade" name="cidade_user" placeholder=" " readonly>
+                                <label for="cidade" class="float">Cidade</label>
+                            </div>
+
+                            <div class="login-box">
+                                <input type="text" id="estado" name="estado_user" placeholder=" " readonly>
+                                <label for="estado" class="float">Estado</label>
+                            </div>
+                        </div>
+
+                        <div class="login-box">
+                            <input type="text" id="bairro" name="bairro_user" placeholder=" ">
+                            <label for="bairro">Bairro</label>
+                        </div>
+
+                        <div class="login-box" id="rua-numero">
+                            <div class="login-box">
+                                <input type="text" id="rua" name="rua_user" placeholder=" ">
+                                <label for="rua" class="float">Rua</label>
+
+                            </div>
+                            
+                            <div class="login-box">
+                                <input type="text" id="numero" name="numero_user" placeholder=" ">
+                                <label for="numero" class="float">Número</label>
+                            </div>
+                        </div>
+
+                        <span id="mensagemCep"></span>
+                        
+
+                    </div>
+
+                    <div class="botoes">
+                        <div class="button-cadastrar">
+                            <button onclick="window.location.href='login.html'" type="button" id="voltar">Voltar</button>
+                        </div>
+
+                        <div class="button-cadastrar">
+                            <button type="submit"  id="cadastrar">Cadastrar</button>
+                        </div>
+                    </div>
+
+                    <div id="mensagem" style="color:red;"></div>
+                    <div id="sucesso" style="color:green;"></div>
+
+                </form>
             </div>
+        </div>
 
-            <div class="botoes">
-                <div class="button-cadastrar">
-                    <button onclick="window.location.href='login.html'" type="button" id="voltar">Voltar</button>
-                </div>
-
-                <div class="button-cadastrar">
-                    <button type="submit"  id="cadastrar">Cadastrar</button>
-                </div>
-            </div>
-
-            <div id="mensagem" style="color:red;"></div>
-            <div id="sucesso" style="color:green;"></div>
-
-        </form>
+        <footer>
+            <p><span>©Todos os direitos reservados</span></p>
+        </footer>
     </div>
     <script src="JS/cadastro.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
