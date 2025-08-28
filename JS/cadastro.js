@@ -1,4 +1,4 @@
-const form = document.getElementById('formCadastro');
+/*const form = document.getElementById('formCadastro');
 const mensagem = document.getElementById('mensagem');
 const sucesso = document.getElementById('sucesso');
 
@@ -76,9 +76,97 @@ form.addEventListener('submit', async (e) => {
   } catch (error) {
     mensagem.textContent = 'Erro ao enviar dados: ' + error.message;
   }
+});*/
+
+document.getElementById("formCadastro").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+  const senha_validar = document.getElementById("senha_validar").value;
+  const telefone = document.getElementById("telefone").value;
+  const dataNascimento = document.getElementById("dataNascimento").value;
+  const cep_cadastro = document.getElementById("cep").value;
+  const cidade_cadastro = document.getElementById("cidade").value;
+  const estado_cadastro = document.getElementById("estado").value;
+  const bairro_cadastro = document.getElementById("bairro").value;
+  const rua_cadastro = document.getElementById("rua").value;
+  const numero_cadastro = document.getElementById("numero").value;
+
+  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+  if (usuarios.some(u => u.email === email)) {
+    alert("Esse e-mail já está cadastrado!");
+    return;
+  }
+  else if(senha.length < 8)
+  {
+    alert("A senha precisa conter 8 ou mais caracteres. Tente novamente!")
+  }
+  else if(senha != senha_validar)
+  {
+    alert("Senha incorreta. Tente novamente!");
+    return;
+  }
+  else if(telefone.length < 14)
+  {
+    alert("Este telefone não existe. Tente novamente!");
+    return;
+  }
+  else if(dataNascimento === "")
+  {
+    alert("Preencha a data de nascimento!");
+    return;
+  }
+  else if(cep_cadastro.length < 8)
+  {
+    alert("Preencha um CEP válido");
+    return;
+  }
+  else if(bairro_cadastro === "")
+  {
+    alert("Insira o nome do bairro!");
+    return;
+  }
+  else if(rua_cadastro === "")
+  {
+    alert("Insira o nome da rua!");
+    return;
+  }
+  else if(numero_cadastro === "")
+  {
+    alert("Insira o número!");
+    return;
+  }
+ 
+  else
+    {
+    const novoUsuario = {
+      nome,
+      email,
+      senha,
+      telefone,
+      dataNascimento,
+      local: { 
+        cep_cadastro,
+        cidade_cadastro, 
+        estado_cadastro,
+        bairro_cadastro,
+        rua_cadastro,
+        numero_cadastro
+        }
+      };
+    usuarios.push(novoUsuario);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    alert("Cadastro realizado com sucesso!");
+    window.location.href = "login.html";
+    }
 });
 
-function Mostrar() {
+/*-----------------------------------------------------------------------------------*/
+
+function MostrarSenha() {
   const password = document.getElementById('senha')
   const btn_show_pass = document.getElementById('btn-password')
 
@@ -91,6 +179,22 @@ function Mostrar() {
     btn_show_pass.classList.replace('bi-eye-slash', 'bi-eye-fill');
   }
 }
+
+function MostrarValidarSenha() {
+  const password_validar = document.getElementById('senha_validar')
+  const btn_pass_validar = document.getElementById('btn-password-validar')
+
+  if (password_validar.type === 'password') {
+    password_validar.setAttribute('type', 'text');
+    btn_pass_validar.classList.replace('bi-eye-fill', 'bi-eye-slash');
+  }
+  else {
+    password_validar.setAttribute('type', 'password');
+    btn_pass_validar.classList.replace('bi-eye-slash', 'bi-eye-fill');
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
 
 const cepInput = document.getElementById("cep");
 const cidade = document.getElementById("cidade");

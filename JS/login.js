@@ -15,3 +15,23 @@ function Mostrar()
     }
 }
 
+/*-----------------------------------------------------------------------------------*/
+
+document.getElementById("formLogin").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+
+  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const usuarioValido = usuarios.find(u => u.email === email && u.senha === senha);
+
+  if (usuarioValido) {
+    localStorage.setItem("usuarioLogado", JSON.stringify(usuarioValido));
+    alert("Login realizado com sucesso!");
+    window.location.href = "index.html";
+  } else {
+    alert("E-mail ou senha inválidos!");
+  }
+});
+
