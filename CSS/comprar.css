@@ -92,11 +92,6 @@ nav li
     cursor: pointer;
 }
 
-#nome-usuario
-{
-    font-family: "Poppins", sans-serif;
-}
-
 .usuario-dropdown {
     display: block; /* escondido por padrão */
     position: absolute;
@@ -159,81 +154,67 @@ nav li
     color: rgb(255, 0, 0);
 }
 
-#tituloCategoria {
-    font-family: "Poppins", sans-serif;
-    font-size: 45px;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.container_cards {
-    grid-row-start: 2;
-    grid-row-end: 2;
-    padding: 30px;
-}
-
-.listaEventos {
+.banner
+{
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: row;
-    height: auto;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.evento-item {
-    background-color: rgba(255, 255, 255, 0.185);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     position: relative;
-    width: 350px;
-    height: 300px;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
-    cursor: pointer;
 }
 
-.evento-item:hover {
-    height: 100%;
-}
-
-.conteudo-principal-evento {
+.banner-foto img
+{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
-
-.logo-evento {
-    width: 100%;
-    height: 200px;
+    position: absolute;
+    width: 300px;
+    height: 380px;
+    bottom: 460px;
+    left: 1180px;
     object-fit: cover;
-    border-radius: 8px;
-    display: block;
+    z-index: 5; /* garante que fique sobre o fundo */
 }
 
-.conteudo-detalhado-evento {
-    margin-top: 20px;
-    opacity: 0;
-    max-height: 0;
+.blur
+{
+    background-color: rgba(0, 0, 0, 0.39);
+    filter: brightness(0.5) blur(15px);
+}
+
+.nome-evento
+{
+    width: 500px;
+    margin: 0;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    padding: 30px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 500px;
+    text-transform: uppercase;
+    font-size: 30px;
+
+    
 }
 
-.evento-item:hover .conteudo-detalhado-evento {
-    opacity: 1;
-    max-height: 400px;
+.descricao-evento
+{
+    font-size: 20px;
+    text-transform: none;
 }
 
-.compraIngressoBtn {
+.evento-detalhes {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(37, 32, 32, 0.219);
+    color: #f1f1f1;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#finalizarCompra {
     background: rgba(39, 141, 39, 0.666);
     color: white;
     border: none;
@@ -246,19 +227,57 @@ nav li
     margin: 20px auto;
 }
 
-.compraIngressoBtn:hover {
+#finalizarCompra:hover {
     background: rgba(42, 207, 42, 0.666);
     color: white;
     box-shadow: 0 0 18px rgba(44, 218, 44, 0.666);
     transform: scale(1.05);
 }
 
-.semEvento {
-    font-size: 20px;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+.evento-detalhes .ingressos {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+.evento-detalhes .ingressos label {
+    font-weight: bolder;
+}
+
+.evento-detalhes .ingressos input[type="number"] {
+    width: 200px;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: #d8d8d84f;
+    color: #ffffff;
+}
+
+.evento-detalhes .ingressos p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.ingressos #valorTotal, #total-text
+{
+    font-family: 'Poppins' sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 30px;
+}
+
+ #total-text
+ {
+    text-transform: uppercase;
+    font-weight: bolder;
+ }
 
 footer {
     display: flex;

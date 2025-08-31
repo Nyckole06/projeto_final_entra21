@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Unira</title>
     <link rel="icon" href="images/logo3.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -15,36 +15,53 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">
-                <img src="images/logo-unira.png"  onclick="window.location.href='index.html'" style="cursor: pointer;" width="130px" height="130px" />
-            </div>
-
             <nav>
+                <div class="logo">
+                    <img src="images/logo-unira.png" onclick="window.location.href='index.html'"
+                        style="cursor: pointer;" width="130px" height="130px" />
+                </div>
+
+
                 <ul class="menu">
-                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#">Inicio</a></li>
                     <li><a href="#categorias">Categorias</a></li>
-                    <li><a href="#">Eventos</a></li>
                     <li><a href="#contato">Contatos</a></li>
                 </ul>
+
+
+                <div class="botao" style="display: block;" id="login-troca">
+                    <button id="login" onclick="window.location.href='login.html'">Login</button>
+                </div>
+
+                <div class="menu-user" id="menuUser" style="display: none;">
+                    <img src="images/user_img.png" alt="" class="user_img">
+                    <span id="nome-usuario"></span style="text-align: center;">
+                    <i class="fa-solid fa-angle-down" id="arrowDown"></i>
+                    <i class="fa-solid fa-angle-up" id="arrowUp" style="display: none;"></i>
+                </div>
+
+
+                <div class="usuario-dropdown" id="userDropdown" style="display: block;">
+                    <ul>
+                        <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
+                        <hr>
+                        <div class="tornarProd" id="tornarProd" style="display: block;">
+                            <li><i class="fa-solid fa-crown" style="font-size: 27px;"></i></i><a href="#">Tornar-se
+                                    promotor</a></li>
+                        </div>
+                        <div class="botaoEventos" id="botaoEventos" style="display: none;">
+                            <li><i class="bi bi-calendar-week" style="display: block;"></i><a
+                                    href="tela-eventos.html">Eventos</a></li>
+                        </div>
+                        <hr>
+                        <li><i class="bi bi-gear-fill"></i><a href="#">Configurações</a></li>
+                        <hr>
+                        <div class="sair" id="sair">
+                            <li><i class="bi bi-door-open-fill"></i><a href="#">Sair</a></li>
+                        </div>
+                    </ul>
+                </div>
             </nav>
-
-            <div class="botao" style="display: block;">
-                <button id="login" onclick="window.location.href='login.html'">Login</button>
-            </div>
-
-            <div class="usuario-dropdown" style="display: none">
-                <i class="bi bi-list" style="display: none"></i>
-                <ul>
-                    <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
-                    <li><i class="bi bi-capslock-fill"></i><a href="#">Tornar-se promotor</a></li>
-                    <li><i class="bi bi-door-closed-fill"></i><a href="#">Sair</a></li>
-                </ul>
-            </div>
-
-            <div class="botao" style="display: none;">
-                <button type="button" id="botao-evento">Eventos</button>
-            </div>
-
         </header>
 
         <main>
@@ -52,14 +69,26 @@
                 <div class="content_homepage">
 
                     <div class="text-center">
-                        <h2>Procurando eventos para se divertir?</h2>
-                        <h3>Na <span>UNIRA</span> você encontra isso e muito mais!</h3>
+                        <h2><span id="titulo">Procurando eventos para se divertir?</span></h2>
+                        <h3><span class="subtitulo">Na Unira você encontra!</span></h3>
+
                     </div>
 
                     <div class="search">
                         <input type="text" name="busca_user" id="busca" placeholder="Qual o seu próximo evento?">
                         <i class="bi bi-search"></i>
                     </div>
+
+                    <section class="main-todos-eventos">
+                        <div class="swiper" id="swiper-eventos">
+                            <div class="swiper-wrapper" id="eventos-wrapper">
+                            </div>
+                            <div class="swiper-pagination eventos-pagination"></div>
+                            <div class="swiper-button-prev eventos-prev"></div>
+                            <div class="swiper-button-next eventos-next"></div>
+                        </div>
+                    </section>
+
                 </div>
 
             </section>
@@ -71,49 +100,56 @@
                 <div class="swiper">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="show"onclick="window.location.href='categoria.html?cat=Show'">
+                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="show"
+                            onclick="window.location.href='categoria.html?cat=Show'">
                             <div class="img-box">
                                 <img src="images/show-icon.png" alt="">
                             </div>
                             <h2>Shows</h2>
                         </div>
 
-                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="teatro"onclick="window.location.href='categoria.html?cat=Teatro'">
+                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="teatro"
+                            onclick="window.location.href='categoria.html?cat=Teatro'">
                             <div class="img-box">
                                 <img src="images/teatro-icon.png" alt="">
                             </div>
                             <h2>Teatro</h2>
                         </div>
 
-                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="gastronomia"onclick="window.location.href='categoria.html?cat=Gastronomia'">
+                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="gastronomia"
+                            onclick="window.location.href='categoria.html?cat=Gastronomia'">
                             <div class="img-box">
                                 <img src="images/gastronomia-icon.png" alt="">
                             </div>
                             <h2>Gastronomia</h2>
                         </div>
 
-                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="tech"onclick="window.location.href='categoria.html?cat=Tecnologia'">
+                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="tech"
+                            onclick="window.location.href='categoria.html?cat=Tecnologia'">
                             <div class="img-box">
                                 <img src="images/tech-icon.png" alt="">
                             </div>
                             <h2>Tecnologia</h2>
                         </div>
 
-                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="humor"onclick="window.location.href='categoria.html?cat=Humor'">
+                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="humor"
+                            onclick="window.location.href='categoria.html?cat=Humor'">
                             <div class="img-box">
                                 <img src="images/humor-icon.png" alt="">
                             </div>
                             <h2>Humor</h2>
                         </div>
 
-                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="arte"onclick="window.location.href='categoria.html?cat=Arte'">
+                        <div class="swiper-slide roxo" data-swiper-autoplay="3000" id="arte"
+                            onclick="window.location.href='categoria.html?cat=Arte'">
                             <div class="img-box">
                                 <img src="images/arte-icon.png" alt="">
                             </div>
                             <h2>Arte</h2>
                         </div>
 
-                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="literatura"onclick="window.location.href='categoria.html?cat=Literatura'">
+                        <div class="swiper-slide laranja" data-swiper-autoplay="3000" id="literatura"
+                            onclick="window.location.href='categoria.html?cat=Literatura'">
                             <div class="img-box">
                                 <img src="images/literatura-icon.png" alt="">
                             </div>
@@ -122,8 +158,8 @@
 
 
                     </div>
-                    
-                   <!-- If we need pagination -->
+
+                    <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
 
                     <!-- If we need navigation buttons -->
@@ -135,9 +171,41 @@
 
         </main>
         <footer id="contato">
-            <p>teste</p>
+            <div class="footer-container">
+                <div class="logo-footer">
+                    <div class="elementos">
+                        <img src="images/logo3.png" alt="">
+                    </div>
+                </div>
+
+                <div class="termos-footer">
+                    <div class="elementos">
+                        <p><a href="#">Termos e Condições</a></p>
+                        <p><a href="#">Ética e Conduta</a></p>
+                    </div>
+                </div>
+
+                <div class="contatos-footer">
+                    <div class="elementos">
+                        <p>Para relatar qualquer problema experienciado no site ou para sugerir melhorias entre em
+                            contato
+                            através do e-mail <a href="#">unira.events@gmail.com</a> ou pelo telefone <a href="#">(47) 3251-0000</a></p>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Deseja realmente se tornar um produtor?</h2>
+            <div class="modal-buttons">
+                <button id="confirmarProdutor">Sim</button>
+                <button id="cancelarProdutor">Não</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="JS/script.js"></script>
     <script src="categorias.js"></script>
