@@ -27,11 +27,20 @@ document.getElementById("formLogin").addEventListener("submit", function (e) {
   const usuarioValido = usuarios.find(u => u.email === email && u.senha === senha);
 
   if (usuarioValido) {
-    localStorage.setItem("usuarioLogado", JSON.stringify(usuarioValido));
-    alert("Login realizado com sucesso!");
-    window.location.href = "index.html";
-  } else {
+  const usuarioLogado = {
+    logado: true,
+    nome: usuarioValido.nome,
+    email: usuarioValido.email,
+    isProdutor: usuarioValido.isProdutor || false
+  };
+
+  localStorage.setItem("usuarioLogado", JSON.stringify(usuarioLogado));
+
+  alert("Login realizado com sucesso!");
+  window.location.href = "index.html";
+} else {
     alert("E-mail ou senha inválidos!");
   }
 });
+
 

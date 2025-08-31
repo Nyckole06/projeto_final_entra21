@@ -1,0 +1,104 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Comprar Ingresso</title>
+    <link rel="stylesheet" href="CSS/comprar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/304afbf940.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="images/logo-unira.png" onclick="window.location.href='index.html'"
+                        style="cursor: pointer;" width="130px" height="130px" />
+                </div>
+
+                <div class="menu-user" id="menuUser">
+                    <img src="images/user_img.png" alt="" class="user_img">
+                    <span id="nome-usuario"></span style="text-align: center;">
+                    <i class="fa-solid fa-angle-down" id="arrowDown"></i>
+                    <i class="fa-solid fa-angle-up" id="arrowUp" style="display: none;"></i>
+                </div>
+
+                <div class="usuario-dropdown" id="userDropdown" style="display: block;">
+                    <ul>
+                        <li><i class="bi bi-house-fill"></i><a href="index.html">Início</a></li>
+                        <hr>
+                        <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
+                        <hr>
+                        <li><i class="bi bi-gear-fill"></i><a href="#">Configurações</a></li>
+                        <hr>
+                        <div class="sair" id="sair">
+                            <li><i class="bi bi-door-open-fill"></i><a href="#">Sair</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+
+        </main>
+        <footer>
+            <p><span>©Todos os direitos reservados</span></p>
+        </footer>
+    </div>
+
+    <script src="JS/comprar.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const evento = JSON.parse(localStorage.getItem("eventoSelecionado"));
+
+            if (evento) {
+                const main = document.querySelector("main");
+                main.innerHTML = `
+
+        <div class="banner">${evento.logo ? `<img  class="blur" style="width: 100%; height: 500px; object-fit: cover;"  src="${evento.logo}" alt="Logo do evento" style="width:300px; border-radius:8px;">` : ""}</div>
+            <div class="evento-detalhes">
+                <div class="banner-foto">
+                ${evento.logo ? `<img src="${evento.logo}" alt="Logo do evento" style="width:300px; border-radius:8px;">` : ""}
+                </div>
+                <div class="nome-evento">
+                <h1>${evento.nome}</h1>
+                <div class="descricao-evento">
+                <p>${evento.descricao}</p>
+                </div>
+                </div>
+                <p><strong>Categoria:</strong> ${evento.categoria}</p>
+                <p><strong>Data e Hora:</strong> ${evento.dataHora}</p>
+                <p><strong>Local:</strong> ${evento.local.rua}, ${evento.local.numero} - ${evento.local.bairro}, ${evento.local.cidade}/${evento.local.estado}</p>
+                <p><strong>Organizador:</strong> ${evento.nomeProdutor}</p>
+                <div class="ingressos">
+
+                    <p><strong>Preço do ingresso:</strong> <span id="valorUnitario">R$ ${evento.precoIngresso}</span></p>
+                    <label for="quantidade">Quantidade de ingressos:</label>
+                    <input type="number" id="quantidade" min="1" value="0">
+                    <p><span id="total-text">Total:</span> <span id="valorTotal">R$ 0,00</span></p>
+                </div>
+
+                <button id="finalizarCompra">Finalizar compra</button>
+            </div>
+        `;
+            } else {
+                document.querySelector("main").innerHTML = "<p>Nenhum evento selecionado.</p>";
+            }
+
+            const quantidadeInput = document.getElementById("quantidade");
+            const valorTotalSpan = document.getElementById("valorTotal");
+            const valorUnitario = Number(evento.precoIngresso);
+
+            quantidadeInput.addEventListener("input", () => {
+                let qtd = Number(quantidadeInput.value);
+                if (!qtd || qtd < 1) {
+                    valorTotalSpan.textContent = `R$ 0.00`;
+                    return;
+                }
+                valorTotalSpan.textContent = `R$ ${(valorUnitario * qtd).toFixed(2)}`;
+            }); 
+        });
+    </script>
+</body>
+
+</html>

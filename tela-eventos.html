@@ -12,18 +12,33 @@
 
 <body>
     <header>
+      <nav>
         <div class="logo">
-            <img src="images/logo-unira.png" onclick="window.location.href='index.html'" style="cursor: pointer;" width="130px" height="130px" />
+          <img src="images/logo-unira.png" onclick="window.location.href='index.html'" style="cursor: pointer;"
+            width="130px" height="130px" />
         </div>
 
-        <div class="usuario-dropdown" style="display: none">
-            <i class="bi bi-list" style="display: none"></i>
-            <ul>
-                <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
-                <li><i class="bi bi-capslock-fill"></i><a href="#">Tornar-se promotor</a></li>
-                <li><i class="bi bi-door-closed-fill"></i><a href="#">Sair</a></li>
-            </ul>
+          <div class="menu-user" id="menuUser">
+            <img src="images/user_img.png" alt="" class="user_img">
+            <span id="nome-usuario"></span style="text-align: center;">
+            <i class="fa-solid fa-angle-down" id="arrowDown"></i>
+            <i class="fa-solid fa-angle-up" id="arrowUp" style="display: none;"></i>
+          </div>
+
+        <div class="usuario-dropdown" id="userDropdown" style="display: block;">
+          <ul>
+            <li><i class="bi bi-house-fill"></i><a href="index.html">Início</a></li>
+            <hr>
+            <li><i class="bi bi-person-fill"></i><a href="#">Perfil</a></li>
+            <hr>
+            <li><i class="bi bi-gear-fill"></i><a href="#">Configurações</a></li>
+            <hr>
+            <div class="sair" id="sair">
+              <li><i class="bi bi-door-open-fill"></i><a href="#">Sair</a></li>
+            </div>
+          </ul>
         </div>
+      </nav>
     </header>
 
     <div class="container">
@@ -142,6 +157,11 @@
                                 <label for="dataHora-evento"><li>Insira a data e hora de início:</li></label>
                             </h2>
                             <input type="datetime-local" id="dataHora-evento" name="dataHora-evento-prod">
+                            
+                            <h2>
+                                <label for="preco-evento"><li>Insira o valor do ingresso:</li></label>
+                            </h2>
+                            <input type="number" id="preco-evento" name="preco-evento-prod" min="0" step="0.01">
 
                             <h2>
                                 <label for="nomeProdutor-evento"><li>Insira o nome do organizador do evento:</li></label>

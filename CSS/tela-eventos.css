@@ -15,24 +15,144 @@ body
     min-height: 100vh;
 }
 
-header
+nav
 {
     
-    background-color: rgba(255, 255, 255, 0);;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(25px);
     display: flex;
-    position: fixed;
-    width: 100%;
-    height: 100px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
     padding: 30px;
     grid-row-start: 1;
     grid-row-end: 1;
-    backdrop-filter: blur(25px);
     box-sizing: border-box;
-    grid-row-start: 1;
-    grid-row-end: 1;
+}
+
+ul, button, input
+{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    color: edf0f1;
+    outline: none;
+    padding: 0;
+}
+
+.menu li:hover
+{
+     transform: scale(1.08);
+}
+
+li a
+{
+    text-decoration: none;
+    color: white;
+}
+
+nav li
+{
+    display: inline-block;
+    padding: 30px;
+}
+
+
+.menu-user
+{
+    background-color: rgba(255, 255, 255, 0.103);
+    padding: 8px;
+    display: flex
+;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    width: auto;
+    gap: 5px;
+    cursor: pointer;
+    color: white;
+    position: relative;
     z-index: 10;
+}
+
+.user_img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#nome-usuario
+{
+    font-family: "Poppins", sans-serif;
+}
+
+.usuario-dropdown {
+    display: block; /* escondido por padrão */
+    position: absolute;
+    top: 90px; /* aparece logo abaixo do nav */
+    right: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 10px 0 10px 10px;
+    padding: 10px;
+    color: white;
+    z-index: 100;
+    width: 235px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none; /* não clica quando invisível */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#userDropdown.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+
+.usuario-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.usuario-dropdown ul li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.usuario-dropdown ul li a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.usuario-dropdown ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.usuario-dropdown .bi
+{
+    padding: 0 10px 0 0;
+    font-weight: 400;
+    font-size: 27px;
+}
+
+.sair:hover
+{
+    color: rgb(255, 0, 0);
 }
 
 .conteudo-principal
@@ -296,7 +416,7 @@ option
   background-color: white; 
 }
 
-select, #dataHora-evento
+select, #dataHora-evento, #preco-evento
 {
     width: 500px;
     font-size: 18px;
